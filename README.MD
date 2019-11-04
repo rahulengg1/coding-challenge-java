@@ -109,3 +109,4 @@ SMS Warning sent to {seller_UUID} (Phone: {seller_Phone}): {Product_name} Produc
 - This endpoint should return array of maximum 10 sellers ordered by count of products they have for sale (count of entries in product table) from the largest to the smallest number. 
 - New endpoint should be properly documented (See Swagger API Docs).
 
+Good luck :) 
