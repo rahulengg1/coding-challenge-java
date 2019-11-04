@@ -38,6 +38,9 @@ Application resources available:
   - Swagger API Docs:  [http://localhost:9001/swagger-ui.html](http://localhost:9001/swagger-ui.html)
  
  ## How to submit your code
+ **IMPORTANT: Don't apply any changes to this repository. All development should be done in your personal Fork of this repository.** 
+ 
+ 
  - Fork current repository
  - Create a separate branch for your updates in the **Forked** GitHub repository. Your branch name should follow the template:
  ```
