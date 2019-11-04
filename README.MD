@@ -44,8 +44,8 @@ Application resources available:
  cc_{first name}_{last name}
  ```
  - Create as many commits as you wish
- - Create Pull Request with your First and Last name as a Title and short description of which tasks were completed.
- - Notify the Hiring Manager when you are Done
+ - Create Pull Request in **Forked Repository** with your First and Last name as a Title and short description of which tasks were completed.
+ - Notify the Hiring Manager when you are Done. Please provide link to your repository.
   
   ## Tasks to DO:
   ### Task 1
