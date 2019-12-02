@@ -1,6 +1,5 @@
 package com.gfg.product.controller;
 
-
 import com.gfg.product.dto.ProductDTO;
 import com.gfg.product.entity.Product;
 import com.gfg.product.exception.ResourceNotFoundException;
@@ -29,8 +28,6 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-
 @RestController
 @RequestMapping(value = "/api")
 @Api(value = "Products")
@@ -42,7 +39,6 @@ public class ProductController {
 	private static final String UUID_ENDPOINT_V2 = "/v2/products/{uuid}";
 
 	private ProductService productService;
-
 
 	private static final ModelMapper mapper = new ModelMapper();
 
@@ -108,8 +104,8 @@ public class ProductController {
 
 		return new ResponseEntity<>(
 				mapper.map(
-						productService.updateProductByUuid(uuid, product),
-						ProductDTO.class),
+					productService.updateProductByUuid(uuid, product),
+					ProductDTO.class),
 				HttpStatus.OK
 		);
 	}

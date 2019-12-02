@@ -1,8 +1,5 @@
 package com.gfg.product.controller;
 
-
-
-
 import com.gfg.product.entity.Seller;
 import com.gfg.product.exception.ResourceNotFoundException;
 import com.gfg.product.service.SellerService;
@@ -31,8 +28,10 @@ public class SellerController {
 	}
 
 	@ApiOperation(value = "View seller information by UUID")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Processed successfully", response = Seller.class),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Processed successfully", response = Seller.class),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") 
+	})
 	@GetMapping(value = "/v1/sellers/{uuid}",
 	produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Seller> getSellerById(@PathVariable @NotNull String uuid) {
@@ -46,8 +45,10 @@ public class SellerController {
 	
 	
 	@ApiOperation(value = "View seller information by UUID")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Processed successfully", response = Seller.class),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Processed successfully", response = Seller.class),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") 
+	})
 	@GetMapping(value = "/v2/sellers/{uuid}",
 	produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Seller> getSellerByIdForLink(@PathVariable @NotNull String uuid) {
@@ -61,13 +62,13 @@ public class SellerController {
 	
 	
 	@ApiOperation(value = "View top 10 seller information")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Processed successfully", response = Seller.class, responseContainer = "List"),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Processed successfully", response = Seller.class, responseContainer = "List"),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") 
+	})
 	@GetMapping(value = "/v2/sellers/top10", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Seller>> getTopTenSeller() {
-		
 		List<Seller> sellers = sellerService.getTopTen();
-		
 
 		return new ResponseEntity<>(sellers, HttpStatus.OK);
 	}
